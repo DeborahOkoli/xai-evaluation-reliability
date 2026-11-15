@@ -1,0 +1,275 @@
+{
+ "configs": [
+  "breast_cancer/lightgbm",
+  "breast_cancer/mlp",
+  "cmapss/lightgbm",
+  "cmapss/mlp",
+  "digits/lightgbm",
+  "digits/mlp"
+ ],
+ "seeds": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "acc": {
+  "breast_cancer/lightgbm": 0.967,
+  "breast_cancer/mlp": 0.95,
+  "cmapss/lightgbm": 0.957,
+  "cmapss/mlp": 0.958,
+  "digits/lightgbm": 0.979,
+  "digits/mlp": 0.955
+ },
+ "n_cells_total": 36,
+ "n_cells_degenerate": 1,
+ "n_cells_valid": 35,
+ "min_n": {
+  "10": 23,
+  "25": 3,
+  "50": 2,
+  "100": 0,
+  "150": 1,
+  "never": 6
+ },
+ "mean_top1_by_n": {
+  "10": 0.878,
+  "25": 0.908,
+  "50": 0.926,
+  "100": 0.937,
+  "150": 0.945
+ },
+ "median_top1_by_n": {
+  "10": 0.961,
+  "25": 0.993,
+  "50": 1.0,
+  "100": 1.0,
+  "150": 1.0
+ },
+ "frac_cells_top1_lt90_at_150": 0.171,
+ "frac_cells_top1_lt90_at_25": 0.257,
+ "curves": {
+  "Deletion": [
+   [
+    10,
+    0.841
+   ],
+   [
+    25,
+    0.874
+   ],
+   [
+    50,
+    0.896
+   ],
+   [
+    100,
+    0.91
+   ],
+   [
+    150,
+    0.915
+   ]
+  ],
+  "FaithCorr": [
+   [
+    10,
+    0.916
+   ],
+   [
+    25,
+    0.944
+   ],
+   [
+    50,
+    0.958
+   ],
+   [
+    100,
+    0.966
+   ],
+   [
+    150,
+    0.976
+   ]
+  ],
+  "breast_cancer": [
+   [
+    10,
+    0.866
+   ],
+   [
+    25,
+    0.894
+   ],
+   [
+    50,
+    0.913
+   ],
+   [
+    100,
+    0.922
+   ],
+   [
+    150,
+    0.925
+   ]
+  ],
+  "cmapss": [
+   [
+    10,
+    0.832
+   ],
+   [
+    25,
+    0.878
+   ],
+   [
+    50,
+    0.903
+   ],
+   [
+    100,
+    0.923
+   ],
+   [
+    150,
+    0.932
+   ]
+  ],
+  "digits": [
+   [
+    10,
+    0.931
+   ],
+   [
+    25,
+    0.95
+   ],
+   [
+    50,
+    0.96
+   ],
+   [
+    100,
+    0.965
+   ],
+   [
+    150,
+    0.975
+   ]
+  ]
+ },
+ "winner_table": {
+  "breast_cancer/lightgbm/Deletion": {
+   "zero": "LIME",
+   "mean": "Occlusion",
+   "sample": "Occlusion"
+  },
+  "breast_cancer/lightgbm/FaithCorr": {
+   "zero": "LIME",
+   "mean": "Occlusion",
+   "sample": "KernelSHAP"
+  },
+  "breast_cancer/mlp/Deletion": {
+   "zero": "LIME",
+   "mean": "Occlusion",
+   "sample": "KernelSHAP"
+  },
+  "breast_cancer/mlp/FaithCorr": {
+   "zero": "LIME",
+   "mean": "Occlusion",
+   "sample": "Occlusion"
+  },
+  "cmapss/lightgbm/Deletion": {
+   "zero": "LIME",
+   "mean": "Occlusion",
+   "sample": "KernelSHAP"
+  },
+  "cmapss/lightgbm/FaithCorr": {
+   "zero": "LIME",
+   "mean": "Occlusion",
+   "sample": "Occlusion"
+  },
+  "cmapss/mlp/Deletion": {
+   "zero": "LIME",
+   "mean": "Occlusion",
+   "sample": "KernelSHAP"
+  },
+  "cmapss/mlp/FaithCorr": {
+   "zero": "tie",
+   "mean": "Occlusion",
+   "sample": "Occlusion"
+  },
+  "digits/lightgbm/Deletion": {
+   "zero": "LIME",
+   "mean": "Occlusion",
+   "sample": "Occlusion"
+  },
+  "digits/lightgbm/FaithCorr": {
+   "zero": "LIME",
+   "mean": "Occlusion",
+   "sample": "Occlusion"
+  },
+  "digits/mlp/Deletion": {
+   "zero": "LIME",
+   "mean": "Occlusion",
+   "sample": "Occlusion"
+  },
+  "digits/mlp/FaithCorr": {
+   "zero": "LIME",
+   "mean": "Occlusion",
+   "sample": "Occlusion"
+  }
+ },
+ "frac_metric_model_cells_winner_changes_with_baseline": [
+  11,
+  12
+ ],
+ "metric_disagree": [
+  4,
+  17
+ ],
+ "seed_winner_differs": [
+  19,
+  350
+ ],
+ "cells_where_some_seed_changes_winner": [
+  8,
+  35
+ ],
+ "variance_share_mean": {
+  "method": 0.266,
+  "baseline": 0.107,
+  "seed": 0.033,
+  "method_x_baseline": 0.493,
+  "method_x_seed": 0.026,
+  "other": 0.074
+ },
+ "ci_excludes_zero_top2": {
+  "25": [
+   23,
+   35
+  ],
+  "50": [
+   25,
+   35
+  ],
+  "150": [
+   28,
+   35
+  ]
+ },
+ "uninformative_seed_cells": {
+  "cmapss/mlp/Deletion/zero": 5,
+  "cmapss/mlp/FaithCorr/zero": 10
+ },
+ "n_lt90_at_25": 9,
+ "n_lt90_at_150": 6
+}
